@@ -32,10 +32,7 @@ hfont = {'fontname':'Arial'}
 dpi = 600
 fmt = "png"
 data_save_path = "/Users/raghavtandon/Documents/PhD/multi-modal/data"
-# figure_save_path = "/Users/raghavtandon/Documents/PhD/multi-modal/figures_publication/final_figures_unscaled"
-figure_save_path = "/Users/raghavtandon/Documents/PhD/multi-modal/figures_publication/final_figures_v4"
-# figure_save_path = "/Users/raghavtandon/Documents/PhD/multi-modal/figures_dir/test_fig"
-# storyboard_save_path = "/Users/raghavtandon/Documents/PhD/multi-modal/storyboard"
+figure_save_path = "/Users/raghavtandon/Documents/PhD/multi-modal/figures_publication/final_figures_v5"
 transparent=True
 
 def imptKNN(x, n_neighbors, weights="uniform"):
@@ -525,7 +522,8 @@ def knnViz(tsne_cn_asym_ad, label_df, nbr=5):
 	return test_knn
 
 def plotROC(X, dx_cmpr, peps, fname, ncv=6, random_state=0, figure_save_path=figure_save_path):
-	clf = LogisticRegression( C=1.0, random_state=0, dual=False, max_iter=3000, class_weight="balanced")
+	clf = LogisticRegression( C=1.0, random_state=0, dual=False, 
+							max_iter=3000, class_weight="balanced")
 	cv = StratifiedKFold(n_splits=ncv)
 	tprs = []
 	aucs = []
@@ -569,7 +567,7 @@ def plotROC(X, dx_cmpr, peps, fname, ncv=6, random_state=0, figure_save_path=fig
 	ax.set(xlim=[-0.05, 1.05], ylim=[-0.05, 1.05])
 	# ax.set_title("ROC plot (with {} fold cross validation)".format(ncv),
 	#        fontsize=15, fontweight="bold")
-	ax.legend(loc="lower right", fontsize=12, framealpha=0.25)
+	ax.legend(loc="lower right", fontsize=15, framealpha=0.0)
 	ax.set_xlabel("False Positive Rate", fontsize=24, fontname='Arial')
 	ax.set_ylabel("True Positive Rate", fontsize=24, fontname='Arial')
 	plt.xticks(fontsize=18)
