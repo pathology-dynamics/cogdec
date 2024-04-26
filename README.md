@@ -1,4 +1,4 @@
-# ehbs_analysis
+# Stratifying Risk of Alzheimer’s Disease in Healthy Middle-Aged Individuals with Machine Learning
 Code for the paper "Stratifying Risk of Alzheimer’s Disease in Healthy Middle-Aged Individuals with Machine Learning"
 
 The paper aims to study the risk for AD in healthy middle-aged people with abnormal levels of CSF amyloid-beta and Tau, referred as Asymptomatic AD population (figure a). It identifies the CSF peptides which are differentiated between healthy controls and AD subjects (figure b), and uses those peptides to stratify asymptomatic AD (figure c and d) in two datasets (EHBS and ADNI).
